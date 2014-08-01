@@ -10,6 +10,15 @@ django-sortedm2m
 The provided ``SortedManyToManyField`` behaves like the original one but
 remembers the order of added relations.
 
+
+Fork notes
+==========
+
+This is the Pancentric fork of ``sortedm2m``. We've added a conditional
+check which stops a separate version of jQueryUI from being installed: this
+was causing conflicts with an existing version of jQueryUI.
+
+
 Usecases
 ========
 
@@ -91,7 +100,7 @@ INSTALLED_APPS settings, like::
        'django.contrib.messages',
        'django.contrib.staticfiles',
        'django.contrib.admin',
-   
+
        'sortedm2m',
 
        '...',

@@ -21,14 +21,18 @@ else:
 
 
 STATIC_URL = getattr(settings, 'STATIC_URL', settings.MEDIA_URL)
+IMPORT_SORTEDM2M_JQUERY_UI = getattr(settings, 'USE_SORTEDM2M_JQUERY_UI', True)
 
 
 class SortedCheckboxSelectMultiple(forms.CheckboxSelectMultiple):
     class Media:
         js = (
             STATIC_URL + 'sortedm2m/widget.js',
-            STATIC_URL + 'sortedm2m/jquery-ui.js',
         )
+        if IMPORT_SORTEDM2M_JQUERY_UI:
+            js += (
+                STATIC_URL + 'sortedm2m/jquery-ui.js',
+            )
         css = {'screen': (
             STATIC_URL + 'sortedm2m/widget.css',
         )}
