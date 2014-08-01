@@ -21,7 +21,7 @@ else:
 
 
 STATIC_URL = getattr(settings, 'STATIC_URL', settings.MEDIA_URL)
-IMPORT_SORTEDM2M_JQUERY_UI = getattr(settings, 'USE_SORTEDM2M_JQUERY_UI', True)
+IMPORT_SORTEDM2M_JQUERY_UI = getattr(settings, 'IMPORT_SORTEDM2M_JQUERY_UI', True)
 
 
 class SortedCheckboxSelectMultiple(forms.CheckboxSelectMultiple):

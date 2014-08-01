@@ -18,6 +18,15 @@ This is the Pancentric fork of ``sortedm2m``. We've added a conditional
 check which stops a separate version of jQueryUI from being installed: this
 was causing conflicts with an existing version of jQueryUI.
 
+How to avoid importing ``sortedm2m`` jQuery UI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Within ``settings.py`` add the following variable:
+
+    ...
+    IMPORT_SORTEDM2M_JQUERY_UI = False
+    ...
+
 
 Usecases
 ========
