@@ -27,6 +27,9 @@ Within ``settings.py`` add the following variable:
     IMPORT_SORTEDM2M_JQUERY_UI = False
     ...
 
+Additionally, the behaviour of the javascript is being tweaked to try and deal
+with large data sets.
+
 
 Usecases
 ========
