@@ -26,13 +26,15 @@ IMPORT_SORTEDM2M_JQUERY_UI = getattr(settings, 'IMPORT_SORTEDM2M_JQUERY_UI', Tru
 
 class SortedCheckboxSelectMultiple(forms.CheckboxSelectMultiple):
     class Media:
-        js = (
-            STATIC_URL + 'sortedm2m/widget.js',
-        )
+        js = ()
         if IMPORT_SORTEDM2M_JQUERY_UI:
             js += (
-                STATIC_URL + 'sortedm2m/jquery-ui.js',
+                STATIC_URL + 'sortedm2m/jquery-noconflict.js',
+                STATIC_URL + 'sortedm2m/html.sortable.min.0.1.3.js'
             )
+        js += (
+            STATIC_URL + 'sortedm2m/widget.js',
+        )
         css = {'screen': (
             STATIC_URL + 'sortedm2m/widget.css',
         )}

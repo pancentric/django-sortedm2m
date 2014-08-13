@@ -1,7 +1,3 @@
-if (jQuery === undefined) {
-    jQuery = django.jQuery;
-}
-
 (function ($) {
     $(function () {
         $(window).load(function (){
@@ -23,11 +19,17 @@ if (jQuery === undefined) {
                 }
                 recalculate_value();
                 checkboxes.change(recalculate_value);
-                $(this).sortable({
-                    axis: 'y',
-                    //containment: 'parent',
-                    update: recalculate_value
-                });
+                // $(this).sortable({
+                //     axis: 'y',
+                //     //containment: 'parent',
+                //     //update: recalculate_value
+                // });
+
+
+                $(this).sortable()
+                    .bind('sortupdate', function(e, ui) {
+                        recalculate_value();
+                    });
             });
 
             $('.sortedm2m-container .selector-filter input').each(function () {
@@ -91,4 +93,4 @@ if (jQuery === undefined) {
             }
         })
     });
-})(jQuery);
+})($v171);

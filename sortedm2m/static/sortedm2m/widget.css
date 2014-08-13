@@ -48,3 +48,10 @@ body.change-form .sortedm2m-container {
     margin: 0;
     padding: 6px 8px;
 }
+
+
+li.sortable-placeholder {
+    border: 1px dashed #CCC;
+    background: none;
+    min-height: 16px;
+}
